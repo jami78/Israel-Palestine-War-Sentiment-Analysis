@@ -1,0 +1,4 @@
+Methodology for Emotion Labeling
+To determine the emotional tone of the messages in our dataset, we used a state-of-the-art natural language processing model specialized in emotion classification. The model, distilroberta-base, fine-tuned for emotion detection, was applied to each message in the dataset.
+
+We initialized the emotion classification pipeline and defined a function to predict the dominant emotion in each message. This function was applied to the 'Message' column of our dataset, creating a new 'Emotions' column with the predicted emotion labels.
