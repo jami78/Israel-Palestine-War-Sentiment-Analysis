@@ -1,0 +1,13 @@
+Original Dataset:
+1. Translated the 'Message' column of the entire dataset using 'deep-translator' library.
+2. Took apart the rows included in training dataset.
+
+Preparation of Training Data:
+1. Separated 7900 rows from the original dataset for training.
+2. Manually labelled the sentiments based on keywords (Pro-Israel, Pro-Palestine, Neutral) and using the LLM Model Mistral-7B-v02 of Hugginface.
+
+
+Training and Testing:
+1. Trained RandomForest model on the training data where CountVector, TF-IDF (Word-level, N-gram, Character-Level) of the Message column were the features and Sentiment was the outcome.
+2. Selected Character-Level TF-IDF with RandomForest as feature and model respectively based on accuracy (93.7%)
+3. Labelled the sentiments of the translated original dataset using the model.
